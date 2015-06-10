@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/twitter_logo_Container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/blueLineHeightCalculator"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"/>
+
+    <TextView
+        android:id="@+id/blueLine"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25dp"
+        android:background="#000fff"/>
+
+    <RelativeLayout
+        android:id="@+id/twitter_parentContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/twitter_iv_logo"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_contacts_default"/>
+
+        <LinearLayout
+            android:id="@+id/twitter_postContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/twitter_iv_logo"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\@srinath.rajaram tweeted"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Why am I seeing most of the "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13 mins ago"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

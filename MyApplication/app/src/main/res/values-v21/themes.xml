@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--&lt;!&ndash; Base application theme. &ndash;&gt;-->
+    <!--<style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="android:windowActionBar">false</item>-->
+        <!--&lt;!&ndash;We will be using the toolbar so no need to show ActionBar&ndash;&gt;-->
+        <!--<item name="windowActionBar">false</item>-->
+    <!--</style>-->
+</resources>

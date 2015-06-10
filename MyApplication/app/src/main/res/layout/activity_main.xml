@@ -1,0 +1,58 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:slidingPanel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.prokarma.myapplication.widget.slidinglayout.SlidingUpPanelLayout
+        android:id="@+id/slidingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        slidingPanel:PanelHeight="0dp"
+        slidingPanel:InitialState="anchored"
+        slidingPanel:AnchorPoint="0.7"
+        slidingPanel:ShadowHeight="4dp"
+        slidingPanel:ParalaxOffset="0dp"
+        slidingPanel:DragView="@+id/slidingLayoutContainer"
+        slidingPanel:Overlay="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- MAIN CONTENT -->
+            <FrameLayout
+                android:id="@+id/mainLayoutContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"/>
+
+            <!-- This is just a dummy view which is above the MainLayoutContainer. The purpose of this view is to avoid
+             dispatching touch delegation to the MainLayoutContainer or its fragment when the SlidingLayout is anchored
+              or visible. This is a workAround in the case that when sliding layout is visible , you cannot touch the
+              views behind the sliding layout when it is visible. You also need to handle the view's visiblity in the
+              SlidingUpPanelLayout.PanelSlideListener to hide and show tis dummy view.-->
+            <View
+                android:id="@+id/maskMainLayoutTouch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:background="@android:color/transparent"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+        <!-- SLIDING LAYOUT -->
+        <FrameLayout
+            android:id="@id/slidingLayoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="false">
+            <!--<include layout="@layout/contact_view"/>-->
+        </FrameLayout>
+    </com.example.prokarma.myapplication.widget.slidinglayout.SlidingUpPanelLayout>
+
+</RelativeLayout>
